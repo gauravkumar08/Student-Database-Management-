@@ -1,1 +1,2 @@
-# Student-Database-Management-
+The Student Database Management System (SDMS) aims to serve as a comprehensive solution for managing and storing student records. This system will maintain detailed information pertaining to individual students, including their personal details such as name and address, academic performance, and attendance records. Additionally, the system will also cater to department-specific data collection, allowing for organized and efficient data management tailored to academic departments.
+
