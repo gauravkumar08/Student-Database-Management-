@@ -1,0 +1,41 @@
+create database College;
+show databases;
+use College;
+
+create table Student1(
+Stud_Name VARCHAR(40),
+Stud_Rollno Integer,
+Stud_Branch VARCHAR(10),
+Stud_Address VARCHAR(50),
+Student_Performance VARCHAR(10),
+Student_Attendance Integer,
+Primary Key(Stud_Name,Stud_Rollno,Stud_Branch));
+
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Gaurav','355','CSE','Agrico','V.Good','85.32');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Raju','234','MECH','Sakchi','Excellent','80.45');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Manish','12','MGT','Bistupur','Good','65.12');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Aryan','33','CSE','Adityapur','Good','96.62');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Abhishek','24','CSE','Kadma','Bad','90.56');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Rajiv','56','EEE','Sonari','Good','66.96');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Himanshu','443','ECE','Baridih','V.Good','89.00');
+insert into Student1(Stud_Name,Stud_Rollno,Stud_Branch,Stud_Address,Student_Performance,Student_Attendance)VALUES('Sachin','553','IT','Telco','Excellent','57.98');
+
+SELECT * FROM Student1;
+
+create table Dept(
+Prof_Name VARCHAR(30),
+Stud_Name VARCHAR(40),
+Stud_Rollno Integer,
+Stud_Branch VARCHAR(10),
+Foreign key(Stud_Name,Stud_Rollno,Stud_Branch) references Student1(Stud_Name,Stud_Rollno,Stud_Branch));
+
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Rajesh','Manish','12','MGT');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Rakesh','Gaurav','355','CSE');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Rakesh','Aryan','33','CSE');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Rakesh','Abhishek','24','CSE');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Esha','Rajiv','56','EEE');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Jagdeesh','Sachin','12','IT');
+insert into Dept(Prof_Name,Stud_Name,Stud_Rollno,Stud_Branch)VALUES('Dr.Aditya','Himanshu','443','ECE');
+
+SELECT * FROM Dept;
+
